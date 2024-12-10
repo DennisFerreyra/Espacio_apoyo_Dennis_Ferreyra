@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Equipo from "../Components/Equipo";
+import {Equipo} from "../Components/Equipo";
 
 const Equiposid = () => {
   const { id } = useParams();

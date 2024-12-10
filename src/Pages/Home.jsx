@@ -1,13 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Home = () => (
-  <div>
-    <h1>Bienvenido</h1>
-    <Link to="/equipoFavorito">Ver equipo favorito</Link>
-    <br />
-    <Link to="/equipos">Ver todos los equipos</Link>
-  </div>
-);
+const Home = () => {
+  return (
+    <div>
+      <h1>Bienvenido a la aplicación</h1>
+      <p>Haz clic en uno de los botones para navegar:</p>
+      <button>
+        <Link to="/EquipoFavorito">Ir a Equipo Favorito</Link>
+      </button>
+      <br />
+      <button>
+        <Link to="/Equipos">Ir a Equipos</Link>
+      </button>
+      <br />
+      <button>
+        <Link to="/Equiposid">Ir a Equipos ID</Link>
+      </button>
+    </div>
+  );
+};
 
 export {Home};
