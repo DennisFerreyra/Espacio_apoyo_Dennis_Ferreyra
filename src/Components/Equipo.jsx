@@ -1,5 +1,18 @@
-const Equipo = () => {
-return <h1>Hi World!</h1>
+import React from "react";
 
-}
-export { Equipo }
+const Equipo = ({ equipo }) => (
+  <div className="equipo">
+    <h2>{equipo.strTeam}</h2>
+    <p>Año: {equipo.intFormedYear}</p>
+    <p>Estadio: {equipo.strStadium}</p>
+    <img src={equipo.strBadge}/>
+    <p>
+      Redes sociales:{" "}
+      <a href={`https://${equipo.strFacebook}`} target="_blank">
+        Facebook
+      </a>
+    </p>
+  </div>
+);
+
+export {Equipo};

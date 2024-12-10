@@ -1,38 +1,25 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { Equipo } from './Components/Equipo.jsx'
-import { EquipoFavorito } from './Pages/EquipoFavorito.jsx'
-import { Equipos } from './Pages/Equipos.jsx'
-import { Equiposid } from './Pages/Equiposid.jsx'
+import React from "react";
+import ReactDOM from "react-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {EquipoFavorito} from "./Pages/EquipoFavorito";
+import {Equipos} from "./Pages/Equipos";
+import {Equiposid} from "./Pages/Equiposid";
+import { Home } from "./Pages/Home";
 
 const router = createBrowserRouter([
-  {
-    path : "/",
-    element: <App/>
-  },
+  { path: "/Home", 
+    element: <Home /> },
 
-  {
-    path : "/EquipoFavorito",
-    element : <EquipoFavorito/>
-  },
+  { path: "/EquipoFavorito",
+    element: <EquipoFavorito /> },
 
-  {
-    path : "/Equipos",
-    element : <Equipos/>
-  },
+  { path: "/Equipos",
+    element: <Equipos /> },
 
-  {
-    path : "/Equiposid",
-    element : <Equiposid/>
-  },
-])
+  { path: "/Equiposid",
+    element: <Equiposid /> },
+]);
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <RouterProvider router={router}/>
-  </StrictMode>,
-)
-
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <RouterProvider router={router} />
+);
