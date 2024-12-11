@@ -13,12 +13,20 @@ const Equiposid = () => {
       .then((response) => response.json())
       .then((data) => {
         const encontrado = data.teams.find((team) => team.idTeam === id);
+        console.log(data)
+        console.log(encontrado)
         setEquipo(encontrado);
       })
       .catch((error) => console.error("Error al cargar equipo:", error));
   }, [id]);
 
-  return equipo ? <Equipo equipo={equipo} /> : <p>Equipo no encontrado</p>;
+  return equipo ? <Equipo
+  nombreEquipo={equipo.strTeam}
+          year={equipo.intFormedYear}
+          nombreEstadio={equipo.strStadium}
+          imgEquipo={equipo.strBadge}
+          strTwitter={equipo.strTwitter}
+  /> : <p>Equipo no encontrado</p>;
 };
 
 export {Equiposid};

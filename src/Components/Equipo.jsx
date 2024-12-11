@@ -7,9 +7,9 @@ return(
     <p>{year}</p>
     <p>{nombreEstadio}</p>
     <img src={imgEquipo}></img>
-    <p>
-    <a href={`https://${strTwitter}`} target="_blank" rel="noopener noreferrer"></a>
-    </p>
+    
+    <a href={`https://${strTwitter}`} target="_blank" rel="noopener noreferrer">Twitter</a>
+    
 </div>
 )
 }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Equipo } from "../Components/Equipo";
+import './index.css';
 
 function Equipos() {
   const [equipos, setEquipos] = useState([]);
@@ -20,6 +21,7 @@ function Equipos() {
       year={equipo.intFormedYear}
       nombreEstadio={equipo.strStadium}
       imgEquipo={equipo.strBadge}
+      strTwitter={equipo.strTwitter}
       key={equipo.idTeam}
     />
   ));

@@ -7,16 +7,16 @@ import {Equiposid} from "./Pages/Equiposid";
 import { Home } from "./Pages/Home";
 
 const router = createBrowserRouter([
-  { path: "/Home", 
+  { path: "/home", 
     element: <Home /> },
 
-  { path: "/EquipoFavorito",
+  { path: "/equipoFavorito",
     element: <EquipoFavorito /> },
 
-  { path: "/Equipos",
+  { path: "/equipos",
     element: <Equipos /> },
 
-  { path: "/Equiposid",
+  { path: "/equiposid/:id",
     element: <Equiposid /> },
 ]);
 
