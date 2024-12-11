@@ -1,4 +1,5 @@
 import React from "react";
+import "./Equipo.css";
 
 const Equipo = ({nombreEquipo, year, nombreEstadio, imgEquipo, strTwitter}) => {
 return(
