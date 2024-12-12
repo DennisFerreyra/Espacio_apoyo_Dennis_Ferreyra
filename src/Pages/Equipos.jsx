@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Equipo } from "../Components/Equipo";
-import './equipos.css';
+
 
 function Equipos() {
   const [equipos, setEquipos] = useState([]);
